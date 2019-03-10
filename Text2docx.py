@@ -34,7 +34,7 @@ def istxt(filename):
 	else:
 		return False
 
-def getprefix(filename):
+def getprefix1(filename):
 	'''提取电子书或任意文件的前缀名'''
 	name_pattern = re.compile(r'(.*?)\.')
 	try:
@@ -45,6 +45,11 @@ def getprefix(filename):
 		sys.exit(-1)
 
 	return prefix                                   
+
+def getprefix(filename):
+    end_len = len(filename.split('.')[0])
+    prefix  = filename[:end_len]
+    return prefix 
 
 def get_titl_text(filename):
 	'''获取txt和title'''
