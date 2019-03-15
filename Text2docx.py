@@ -47,9 +47,7 @@ def getprefix1(filename):
 	return prefix                                   
 
 def getprefix(filename):
-    end_len = len(filename.split('.')[0])
-    prefix  = filename[:end_len]
-    return prefix 
+    return filename.split('.')[0]
 
 def get_titl_text(filename):
 	'''获取txt和title'''
