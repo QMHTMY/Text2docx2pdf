@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # Copyright 2019 Shieber
 # All Rights Reserved.
@@ -17,15 +17,15 @@
 # 将txt文件转换为docx文档
 # -a 将当前目录所有txt文件转换为docx格式
 
+import re, sys
 from os import listdir
+from docx import Document 
 from os.path import  basename 
 from os.path import  exists
-from docx import Document 
-import re 
 
-import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')  #解决中文解析出错的问题,decode解决写入问题
+#import sys
+#reload(sys)
+#sys.setdefaultencoding('utf-8')  #解决中文解析出错的问题,decode解决写入问题
 
 def istxt(filename):
 	'''判断是否为txt文档'''
@@ -53,8 +53,8 @@ def get_titl_text(filename):
 	'''获取txt和title'''
 	try:
 		txtobj = open(filename)
-		title  = txtobj.readline().decode('utf-8')
-		text   = txtobj.read().decode('utf-8')     #decode还原为utf-8  encode
+		title  = txtobj.readline() #.decode('utf-8')
+		text   = txtobj.read() #.decode('utf-8')     #decode还原为utf-8  encode
 		txtobj.close() 
 	except Exception as err:
 		print("Error, file does not exist")
