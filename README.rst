@@ -28,7 +28,7 @@ Details
 "-a" option is to convert every txt file in current directory to docx.
 Please add the Text2docx into /usr/bin  and change its mode.
 
-mv Text2docx Text2docx
+mv Text2docx.py Text2docx
 
 sudo chmod 755 Text2docx
 
