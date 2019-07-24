@@ -17,18 +17,19 @@ def trans2pdf():
         print('Usage: %s name.docx or %s -a'%(script,script))
         sys.exit(-1)
 
-    start = time.time()
     if '-a' == argv[1] or '--all' == argv[1]:
         order = 'libreoffice --invisible --convert-to pdf *.docx 1>/dev/null 2>&1'
-        call(order,shell=True)
     else:
         if argv[1].endswith('.docx'):
             order = 'libreoffice --invisible --convert-to pdf %s 1>/dev/null 2>&1'%argv[1]
-            call(order,shell=True)
         else:
             print('Error, file type does not match!')
-    end = time.time()
-    print('耗时：%.2f(s)'%(end-start))
+            sys.exit(-1)
+
+    call(order,shell=True)
 
 if __name__ == '__main__':
+    start = time.time()
     trans2pdf()
+    end = time.time()
+    print('耗时：%.2f(s)'%(end-start))
