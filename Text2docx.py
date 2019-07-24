@@ -20,8 +20,7 @@
 import re, sys,time
 from os import listdir
 from docx import Document 
-from os.path import  basename 
-from os.path import  exists
+from os.path import  exists basename 
 
 #import sys
 #reload(sys)
