@@ -3,6 +3,7 @@
 -----------------------
 <li><a href="README.md">English</a></li>
 <li> 转换当前目录下制定文件或所有文件为 docx 或 pdf 格式。</li>
+<li> 所有代码在program目录，测试文件在docs目录</li>
 
 # 依赖 #
 <li> python3 </li>

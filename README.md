@@ -3,6 +3,7 @@
 ------------------------------------
 <li><a href="README_CN.md">中文版</a></li>
 <li> Command line interface for converting txt file to docx, pdf file, convering docx file to pdf file.</li>
+<li> All codes in program and test file in docs</li>
 
 # Requirement #
 <li> python3 </li>
