@@ -26,16 +26,17 @@ $sudo pip3 install python-docx
 	$ sudo mv Text2docx /usr/bin/
 	$ sudo mv Docx2pdf  /usr/bin/
 
-就像使用系统指令一样，假如当前目录下有一个name.txt
+就像使用系统指令一样，假如docs目录下有一个test.txt
 
+	$ cd docs
 	$ ls
-	-rw-r--r-- username grpname 1.0M Jun 24 15:27 name.txt
-	$ Text2docx name.txt 
-	$ Docx2pdf name.docx
-
-Find your files on the current directory:
-	
+	-rw-r--r-- 1 shieber shieber  63 Jun 24 19:51 test.txt
+	$ Text2docx test.txt 
 	$ ls
-	-rw-r--r-- username grpname 2.1M Jun 24 15:28 name.docx
-	-rw-r--r-- username grpname 2.0M Jun 24 15:28 name.pdf
-	-rw-r--r-- username grpname 1.0M Jun 24 15:27 name.txt
+	-rw-r--r-- 1 shieber shieber 36K Jun 24 19:51 test.docx
+	-rw-r--r-- 1 shieber shieber  63 Jun 24 19:51 test.txt
+	$ Docx2pdf  test.docx
+	$ ls
+	-rw-r--r-- 1 shieber shieber  36K Jun 24 19:51 test.docx
+	-rw-r--r-- 1 shieber shieber 9.6K Jun 24 19:52 test.pdf
+	-rw-r--r-- 1 shieber shieber   63 Jun 24 19:51 test.txt
