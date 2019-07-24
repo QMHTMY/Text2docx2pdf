@@ -20,7 +20,7 @@ You can add Text2docx.py and Docx2pdf.py into your OS as below.
 	
 	$ mv Text2docx.py Text2docx
 	$ mv Docx2pdf.py  Docx2pdf 
-	$ sudo chmod 755 Text2docx, Docx2pdf
+	$ sudo chmod 755  Text2docx, Docx2pdf
 	$ sudo chown root Text2docx, Docx2pdf
 	$ sudo chgrp root Text2docx, Docx2pdf
 	$ sudo mv Text2docx /usr/bin/
