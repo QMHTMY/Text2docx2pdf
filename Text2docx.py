@@ -17,7 +17,7 @@
 # 将txt文件转换为docx文档
 # -a 将当前目录所有txt文件转换为docx格式
 
-import re, sys
+import re, sys,time
 from os import listdir
 from docx import Document 
 from os.path import  basename 
@@ -107,4 +107,7 @@ def text2docx():
 			write2docx(docxname,title,text)
 
 if __name__ == "__main__":
-	text2docx()
+    start = time.time()
+    text2docx()
+    end  = time.time()
+    print('耗时：%.2f(s)'%(end - start))
