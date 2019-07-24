@@ -28,14 +28,15 @@ You can add Text2docx.py and Docx2pdf.py into your OS as below.
 
 Then you can use them  as system orders: 
 
+	$ cd docs
 	$ ls
-	-rw-r--r-- username grpname 3.5M Jun 24 15:27 name.txt
-	$ Text2docx name.txt 
-	$ Docx2pdf name.docx
-
-Find your files on the current directory:
-	
+	-rw-r--r-- 1 shieber shieber  63 Jun 24 19:51 test.txt
+	$ Text2docx test.txt 
 	$ ls
-	-rw-r--r-- username grpname 2.1M Jun 24 15:28 name.docx
-	-rw-r--r-- username grpname 2.0M Jun 24 15:28 name.pdf
-	-rw-r--r-- username grpname 1.0M Jun 24 15:27 name.txt
+	-rw-r--r-- 1 shieber shieber 36K Jun 24 19:51 test.docx
+	-rw-r--r-- 1 shieber shieber  63 Jun 24 19:51 test.txt
+	$ Docx2pdf  test.docx
+	$ ls
+	-rw-r--r-- 1 shieber shieber  36K Jun 24 19:51 test.docx
+	-rw-r--r-- 1 shieber shieber 9.6K Jun 24 19:52 test.pdf
+	-rw-r--r-- 1 shieber shieber   63 Jun 24 19:51 test.txt
