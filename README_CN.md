@@ -1,22 +1,22 @@
 -----------------------
  # Text2docx & Docx2pdf #
 -----------------------
-<li><a href="README_CN.md">中文版</a></li>
-<li> Command line interface for converting txt file to docx file, docx file to pdf file.</li>
+<li><a href="README.md">English</a></li>
+<li> 转换当前目录下制定文件或所有文件为 docx 或 pdf 格式。</li>
 
-# Requirement #
+# 依赖 #
 <li> python3 </li>
 <li> python-docx </li>
 $sudo pip3 install python-docx
 
-# Usage #
+# 使用 #
     $ python3 Text2docx.py name.txt 
     $ python3 Docx2pdf.py  name.docx
-    $ python3 Text2docx.py -a (-a equals --all) (transfer all files)
-    $ python3 Docx2pdf.py  -a 
+    $ python3 Text2docx.py -a (-a 就是 --all) (转换当前目录下所有文件)
+    $ python3 Docx2pdf.py  -a  
 
-# Note #
-You can add Text2docx.py and Docx2pdf.py into your OS as below. 
+# 注意 #
+你可以将其加入系统中，当成系统指令来调用。具体操作如下：
 	
 	$ mv Text2docx.py Text2docx
 	$ mv Docx2pdf.py  Docx2pdf 
@@ -26,10 +26,10 @@ You can add Text2docx.py and Docx2pdf.py into your OS as below.
 	$ sudo mv Text2docx /usr/bin/
 	$ sudo mv Docx2pdf  /usr/bin/
 
-Then you can use them  as system orders: 
+就像使用系统指令一样，假如当前目录下有一个name.txt
 
 	$ ls
-	-rw-r--r-- username grpname 3.5M Jun 24 15:27 name.txt
+	-rw-r--r-- username grpname 1.0M Jun 24 15:27 name.txt
 	$ Text2docx name.txt 
 	$ Docx2pdf name.docx
 
