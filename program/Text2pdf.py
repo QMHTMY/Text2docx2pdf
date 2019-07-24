@@ -13,8 +13,8 @@ from subprocess import call
 def transfer(fils):
     for fil in fils:
         if fil.endswith('.txt'):
-            call('Text2docx %s'%fil, shell=True)
-            call('Docx2pdf %s'%(''.join([fil.split('.')[0],'.docx'])), shell=True)
+            call('Text2docx %s >/dev/null '%fil, shell=True)
+            call('Docx2pdf %s >/dev/null'%(''.join([fil.split('.')[0],'.docx'])),shell=True)
 
 def trans2pdf():
     argv = sys.argv
