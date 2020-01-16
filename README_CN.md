@@ -1,21 +1,14 @@
------------
-# 兼容系统 #
-------------
-	Unix-like OS
+### 兼容系统 
+- Linux 
 
-------------------------------------
- # Text2docx & Text2pdf & Docx2pdf #
-------------------------------------
-<li><a href="README.md">English</a></li>
-<li> 转换当前目录下制定文件或所有文件为 docx 或 pdf 格式。</li>
-<li> 所有代码在program目录，测试文件在docs目录</li>
+### Text2docx & Text2pdf & Docx2pdf 
+[[English](./README.md)] 转换当前目录下制定文件或所有文件为 docx 或 pdf 格式。所有代码在program目录，测试文件在docs目录。
 
-# 依赖 #
-<li> python3 </li>
-<li> python-docx </li>
-$sudo pip3 install python-docx
+### 依赖 
+	python3 和 python-docx   
+	$sudo pip3 install python-docx
 
-# 使用 #
+### 使用 
     $ python3 Text2docx.py test.txt 
     $ python3 Text2pdf.py  test.txt
     $ python3 Docx2pdf.py  test.docx
@@ -23,7 +16,7 @@ $sudo pip3 install python-docx
     $ python3 Text2pdf.py  -a 
     $ python3 Docx2pdf.py  -a 
 
-# 注意 #
+### 注意 
 你可以将其加入系统中，当成系统指令来调用。具体操作如下：
 	
 	$ mv Text2docx.py Text2docx

@@ -1,7 +1,7 @@
 ### Compatible OS 
 	Unix-like OS
 
- ### Text2docx & Docx2pdf & Text2pdf 
+### Text2docx & Docx2pdf & Text2pdf 
 [[中文版](./README_CN.md)] Command line interface for converting txt file to docx, pdf file, convering docx file to pdf file. All codes in program and test file in docs.
 
 ### Requirement 
