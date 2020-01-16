@@ -1,21 +1,14 @@
------------------
-# Compatible OS #
------------------
+### Compatible OS 
 	Unix-like OS
 
-------------------------------------
- # Text2docx & Docx2pdf & Text2pdf #
-------------------------------------
-<li><a href="README_CN.md">中文版</a></li>
-<li> Command line interface for converting txt file to docx, pdf file, convering docx file to pdf file.</li>
-<li> All codes in program and test file in docs</li>
+ ### Text2docx & Docx2pdf & Text2pdf 
+[[中文版](./README_CN.md)] Command line interface for converting txt file to docx, pdf file, convering docx file to pdf file. All codes in program and test file in docs.
 
-# Requirement #
-<li> python3 </li>
-<li> python-docx </li>
-$sudo pip3 install python-docx
+### Requirement 
+	python3 and python-docx   
+	$sudo pip3 install python-docx
 
-# Usage #
+### Usage 
     $ python3 Text2docx.py test.txt 
     $ python3 Text2pdf.py  test.txt
     $ python3 Docx2pdf.py  test.docx
@@ -23,7 +16,7 @@ $sudo pip3 install python-docx
     $ python3 Text2pdf.py  -a 
     $ python3 Docx2pdf.py  -a 
 
-# Note #
+### Note 
 You can add Text2docx.py and Docx2pdf.py into your OS as below. 
 	
 	$ mv Text2docx.py Text2docx
