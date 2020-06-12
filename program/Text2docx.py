@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
 #    Author: Shieber
@@ -43,30 +43,30 @@ def write2docx(docxname,title,txt,logname):
         docx.add_paragraph(txt)
     except Exception as err:
         with open(logname,'w+') as logobj:
-            logobj.write('Error:%s'%err)
+            logobj.write(f'Error: {err}')
         sys.exit(-1)
 
     docx.save(docxname)
 
-def getTitle(fil,logname):
+def getTitle(fl,logname):
     '''获取txt和title'''
     try:
-        with open(fil) as txtobj:
+        with open(fl) as txtobj:
             title = txtobj.readline()
             text  = txtobj.read()
         return title, text
     except Exception as err:
         with open(logname,'w+') as logobj:
-            logobj.write('Error:%s'%err)
+            logobj.write(f'Error: {err}')
         sys.exit(-1)
 
-def transfer(fils):
+def transfer(files):
     logname = ''.join([getcwd(),'/','err.log'])
-    for fil in fils:
-        if not fil.endswith('.txt'):
+    for fl in files:
+        if not fl.endswith('.txt'):
             continue
-        docxname  = ''.join([fil.split('.')[0],'.docx'])
-        title,txt = getTitle(fil,logname)
+        docxname  = ''.join([fl.split('.')[0],'.docx'])
+        title,txt = getTitle(fl,logname)
         write2docx(docxname,title,txt,logname)
 
 def text2docx():
@@ -74,7 +74,7 @@ def text2docx():
     argv = sys.argv
     if len(argv) < 2:
         program = basename(argv[0])
-        print("Usage: %s test.txt or %s -a"%(program,program))
+        print(f"Usage: {program} test.txt or {program} -a")
         sys.exit(-1)
 
     if '-a' == argv[1] or '--all' == argv[1]:
@@ -88,4 +88,4 @@ if __name__ == "__main__":
     start = time.time()
     text2docx()
     end = time.time()
-    print('耗时：%.2f(s)'%(end - start))
+    print(f'耗时：{end - start:.2f}(s)')

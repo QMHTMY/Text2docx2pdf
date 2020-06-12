@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 #    Author: Shieber
@@ -26,16 +26,16 @@ from os.path import  basename
 from subprocess import call
 
 def transfer(fils):
-    for fil in fils:
-        if fil.endswith('.txt'):
-            call('Text2docx %s >/dev/null '%fil, shell=True)
-            call('Docx2pdf %s >/dev/null'%(''.join([fil.split('.')[0],'.docx'])),shell=True)
+    for fl in fils:
+        if fl.endswith('.txt'):
+            call(f'Text2docx {fl} >/dev/null', shell=True)
+            call(f'Docx2pdf {''.join([fl.split('.')[0],'.docx'])}%s >/dev/null', shell=True)
 
 def trans2pdf():
     argv = sys.argv
     if len(sys.argv) < 2:
         program = basename(argv[0])
-        print("Usage: %s test.txt or %s -a"%(program,program))
+        print(f"Usage: {program} test.txt or {program} -a"%(program,program))
         sys.exit(-1)
 
     if '-a' == argv[1] or '--all' == argv[1]:
@@ -49,4 +49,4 @@ if __name__ == '__main__':
     start = time.time()
     trans2pdf()
     end = time.time()
-    print('耗时：%.2f(s)'%(end - start))
+    print(f'耗时：{end - start:.2f}(s)')
